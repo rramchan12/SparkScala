@@ -8,10 +8,11 @@ import org.apache.log4j.Logger
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 
-final case class Movie(movieId: Int)
+
 
 
 object PopularMovieDataSets {
+  final case class Movie(movieId: Int)
   
     /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {
